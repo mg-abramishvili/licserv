@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+    'reset' => false
+]);
 
 Route::view('/home', 'home')->middleware('auth');
