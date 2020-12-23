@@ -16,11 +16,7 @@ class KeyController extends Controller
      */
     public function index()
     {
-        if (Auth::user()) {
-            return Key::latest()->paginate(20);
-        } else {
-            return "Доступ запрещен!";
-        }
+        return Key::latest()->paginate(20);
     }
 
     public function add(Request $request)
@@ -43,30 +39,21 @@ class KeyController extends Controller
 
     public function edit($id)
     {
-        if (Auth::user()) {
-            $key = Key::find($id);
-            return response()->json($key);
-        } else {
-            return "Доступ запрещен!";
-        }
+        $key = Key::find($id);
+        return response()->json($key);
     }
 
     public function update($id, Request $request)
     {
-        if (Auth::user()) {
-            $key = Key::find($id);
-            $key->update($request->all());
-            return response()->json('The key successfully updated');
-        } else {
-            return "Доступ запрещен!";
-        }
+        $key = Key::find($id);
+        $key->update($request->all());
+        return response()->json('The key successfully updated');
     }
 
     public function activate($key, Request $request)
     {
         $key = Key::where('key', '=', $key)->firstOrFail();
         $key->update($request->all());
-
         return response()->json('The key successfully updated');
     }
 
@@ -78,12 +65,8 @@ class KeyController extends Controller
 
     public function delete($id)
     {
-        if (Auth::user()) {
-            $key = Key::find($id);
-            $key->delete();
-            return response()->json('The key successfully deleted');
-        } else {
-            return "Доступ запрещен!";
-        }
+        $key = Key::find($id);
+        $key->delete();
+        return response()->json('The key successfully deleted');
     }
 }
