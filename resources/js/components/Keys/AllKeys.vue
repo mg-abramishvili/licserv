@@ -23,10 +23,13 @@
                 Статус
               </th>
               <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Дата активации
+                Комментарий
               </th>
               <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Комментарий
+                Дата создания
+              </th>
+              <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Дата активации
               </th>
               <th scope="col" class="px-6 py-3 bg-gray-50">
                 
@@ -54,6 +57,9 @@
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 {{ key.created_at }}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                {{ key.updated_at }}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <button class="text-indigo-600 hover:text-indigo-900" @click="deleteKey(key.id)">Удалить</button>

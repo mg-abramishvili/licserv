@@ -20,9 +20,15 @@ class KeyController extends Controller
 
     public function add(Request $request)
     {
+
+        $generate1 = \Str::random(4);
+        $generate2 = \Str::random(4);
+        $generate3 = \Str::random(4);
+        $generate4 = \Str::random(4);
+
         $key = new Key([
-            'key' => $request->get('key'),
-            'status' => $request->get('status'),
+            'key' => \Str::upper($generate1."-".$generate2."-".$generate3."-".$generate4),
+            'status' => 'waiting',
             'comment' => $request->get('comment'),
         ]);
         $key->save();

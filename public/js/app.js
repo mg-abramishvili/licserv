@@ -1919,6 +1919,68 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1955,11 +2017,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1967,6 +2024,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    randomNumber: function randomNumber() {
+      return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    },
     addKey: function addKey() {
       var _this = this;
 
@@ -1995,6 +2055,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -24317,11 +24383,188 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex flex-wrap" }, [
     _c("div", { staticClass: "w-full bg-white min-h-screen shadow-lg" }, [
-      _c("div", { staticClass: "bg-white mb-20" }, [_c("router-view")], 1)
+      _c("nav", { staticClass: "bg-gray-800" }, [
+        _c("div", { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" }, [
+          _c(
+            "div",
+            { staticClass: "relative flex items-center justify-between h-16" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "absolute inset-y-0 left-0 flex items-center sm:hidden"
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white",
+                      attrs: { "aria-expanded": "false" }
+                    },
+                    [
+                      _c("span", { staticClass: "sr-only" }, [
+                        _vm._v("Open main menu")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "block h-6 w-6",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor",
+                            "aria-hidden": "true"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d: "M4 6h16M4 12h16M4 18h16"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "hidden h-6 w-6",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor",
+                            "aria-hidden": "true"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d: "M6 18L18 6M6 6l12 12"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(1)
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "bg-white mb-20" }, [
+        _c(
+          "div",
+          { staticClass: "max-w-7xl mx-auto px-2 py-4 sm:px-6 lg:px-8" },
+          [_c("router-view")],
+          1
+        )
+      ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+      },
+      [
+        _c("div", { staticClass: "flex-shrink-0 flex items-center" }, [
+          _c("a", { attrs: { href: "/" } }, [
+            _c("img", {
+              staticClass: "block h-8 w-auto",
+              attrs: { src: "/logo-h.png", alt: "Workflow" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+          _c("div", { staticClass: "flex space-x-4" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium",
+                attrs: { href: "/" }
+              },
+              [_vm._v("Ключи")]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hidden sm:hidden" }, [
+      _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+        _c(
+          "a",
+          {
+            staticClass:
+              "bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium",
+            attrs: { href: "#" }
+          },
+          [_vm._v("Dashboard")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium",
+            attrs: { href: "#" }
+          },
+          [_vm._v("Team")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium",
+            attrs: { href: "#" }
+          },
+          [_vm._v("Projects")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium",
+            attrs: { href: "#" }
+          },
+          [_vm._v("Calendar")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -24344,135 +24587,88 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", { staticClass: "text-center" }, [_vm._v("Новый ключ")]),
+    _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-6" }, [
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.addKey($event)
+          }
+        }
+      },
+      [
         _c(
-          "form",
+          "div",
           {
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-                return _vm.addKey($event)
-              }
-            }
+            staticClass:
+              "flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4"
           },
           [
-            _c(
-              "div",
-              {
+            _c("div", { staticClass: "w-full" }, [
+              _c(
+                "label",
+                { staticClass: "block text-sm font-medium text-gray-700" },
+                [_vm._v("Комментарий")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.key.comment,
+                    expression: "key.comment"
+                  }
+                ],
                 staticClass:
-                  "flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4"
-              },
-              [
-                _c("div", { staticClass: "w-full lg:w-1/3" }, [
-                  _c(
-                    "label",
-                    { staticClass: "block text-sm font-medium text-gray-700" },
-                    [_vm._v("Ключ")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.key.key,
-                        expression: "key.key"
-                      }
-                    ],
-                    staticClass:
-                      "block w-full text-md rounded-md p-1 border border-gray-300",
-                    attrs: { type: "text" },
-                    domProps: { value: _vm.key.key },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.key, "key", $event.target.value)
-                      }
+                  "block w-full text-md rounded-md p-1 border border-gray-300",
+                attrs: { type: "text" },
+                domProps: { value: _vm.key.comment },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
                     }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "w-full lg:w-1/3" }, [
-                  _c(
-                    "label",
-                    { staticClass: "block text-sm font-medium text-gray-700" },
-                    [_vm._v("Статус")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.key.status,
-                        expression: "key.status"
-                      }
-                    ],
-                    staticClass:
-                      "block w-full text-md rounded-md p-1 border border-gray-300",
-                    attrs: { type: "text" },
-                    domProps: { value: _vm.key.status },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.key, "status", $event.target.value)
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "w-full lg:w-1/3" }, [
-                  _c(
-                    "label",
-                    { staticClass: "block text-sm font-medium text-gray-700" },
-                    [_vm._v("Комментарий")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.key.comment,
-                        expression: "key.comment"
-                      }
-                    ],
-                    staticClass:
-                      "block w-full text-md rounded-md p-1 border border-gray-300",
-                    attrs: { type: "text" },
-                    domProps: { value: _vm.key.comment },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.key, "comment", $event.target.value)
-                      }
-                    }
-                  })
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Добавить")]
-            )
+                    _vm.$set(_vm.key, "comment", $event.target.value)
+                  }
+                }
+              })
+            ])
           ]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "bg-blue-500 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white text-sm font-semibold shadow",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("Добавить")]
         )
-      ])
-    ])
+      ]
+    )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-wrap items-center mb-6" }, [
+      _c("div", { staticClass: "flex w-1/2" }, [
+        _c("div", { staticClass: "block" }, [
+          _c("h1", { staticClass: "text-2xl font-semibold" }, [
+            _vm._v("Новый ключ")
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -24593,6 +24789,19 @@ var render = function() {
                   "td",
                   {
                     staticClass:
+                      "px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                  },
+                  [
+                    _vm._v(
+                      "\n            " + _vm._s(key.updated_at) + "\n          "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  {
+                    staticClass:
                       "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
                   },
                   [
@@ -24663,7 +24872,7 @@ var staticRenderFns = [
               "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
             attrs: { scope: "col" }
           },
-          [_vm._v("\n            Дата активации\n          ")]
+          [_vm._v("\n            Комментарий\n          ")]
         ),
         _vm._v(" "),
         _c(
@@ -24673,7 +24882,17 @@ var staticRenderFns = [
               "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
             attrs: { scope: "col" }
           },
-          [_vm._v("\n            Комментарий\n          ")]
+          [_vm._v("\n            Дата создания\n          ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+            attrs: { scope: "col" }
+          },
+          [_vm._v("\n            Дата активации\n          ")]
         ),
         _vm._v(" "),
         _c("th", {
