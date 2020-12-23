@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Key;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 class KeyController extends Controller
 {
@@ -15,7 +16,11 @@ class KeyController extends Controller
      */
     public function index()
     {
-        return Key::latest()->paginate(20);
+        if (Auth::user()) {
+            return Key::latest()->paginate(20);
+        } else {
+            return "Доступ запрещен!";
+        }
     }
 
     public function add(Request $request)
@@ -38,29 +43,47 @@ class KeyController extends Controller
 
     public function edit($id)
     {
-        $key = Key::find($id);
-        return response()->json($key);
+        if (Auth::user()) {
+            $key = Key::find($id);
+            return response()->json($key);
+        } else {
+            return "Доступ запрещен!";
+        }
     }
 
     public function update($id, Request $request)
     {
-        $key = Key::find($id);
+        if (Auth::user()) {
+            $key = Key::find($id);
+            $key->update($request->all());
+            return response()->json('The key successfully updated');
+        } else {
+            return "Доступ запрещен!";
+        }
+    }
+
+    public function activate($key, Request $request)
+    {
+        $key = Key::where('key', '=', $key)->firstOrFail();
         $key->update($request->all());
 
         return response()->json('The key successfully updated');
     }
 
-    public function view($id)
+    public function view($key)
     {
-        $key = Key::with('finances')->find($id);
+        $key = Key::where('key', '=', $key)->firstOrFail();
         return response()->json($key);
     }
 
     public function delete($id)
     {
-        $key = Key::find($id);
-        $key->delete();
-
-        return response()->json('The key successfully deleted');
+        if (Auth::user()) {
+            $key = Key::find($id);
+            $key->delete();
+            return response()->json('The key successfully deleted');
+        } else {
+            return "Доступ запрещен!";
+        }
     }
 }
